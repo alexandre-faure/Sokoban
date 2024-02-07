@@ -1,0 +1,388 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SuccessBoxPanel" version="4">
+  <OBJECT>
+    <ID name="SuccessBoxPanel" mc="Standard.Class" uid="b2c3a5f6-0913-4a9c-9e5b-adff3ba2ed14"/>
+    <PID name="viewSwing" mc="Standard.Package" uid="9daa9918-473d-4ab8-8a24-90f1d06c7455"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SuccessBoxPanel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="SuccessBoxPanel" mc="Standard.Operation" uid="0cce06cf-a30e-42fc-b8f6-61ee3a542868"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[SuccessBoxPanel]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="gamePanel" mc="Standard.Parameter" uid="a597403d-02b0-4d12-b60b-df2d7babfa91"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">Inout</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[gamePanel]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="GamePanel" mc="Standard.Class" uid="1facf43b-a0fb-4a61-b76e-83b88d0fcce4"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Infrastructure.Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="04fc1304-ad09-4ea7-9e51-9f2dcd898b69"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[setLayout(new GridBagLayout());
+this.gamePanel = gamePanel;
+
+final Color DARK_GREEN = new Color(0,120,0);
+
+// Ajout d'une bordure
+setBorder(new LineBorder(DARK_GREEN, 3));
+
+// Texte de félicitations
+JLabel winLabel1 = new JLabel("FÉLICITATIONS");
+winLabel1.setFont(new Font("Arial", Font.BOLD, 35));
+winLabel1.setHorizontalAlignment(JLabel.CENTER);
+winLabel1.setForeground(DARK_GREEN);
+
+JLabel winLabel2 = new JLabel("Vous avez gagné !");
+winLabel2.setFont(new Font("Arial", Font.BOLD, 16));
+winLabel2.setHorizontalAlignment(JLabel.CENTER);
+
+// Bouton retour à l'accueil
+JButton homeButton = new JButton("Retour à l'accueil");
+homeButton.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // On retourne vers l'accueil
+        setVisible(false);
+        gamePanel.getMainWindow().setActivePanel("home");
+    }
+});
+
+// Bouton rejouer
+JButton replayButton = new JButton("Rejouer le niveau");
+replayButton.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // On rejoue
+        setVisible(false);
+        gamePanel.beginLevel(gamePanel.getMainWindow().getController().getLevel());
+    }
+});
+
+// Bouton quitter
+JButton quitButton = new JButton("Quitter");
+quitButton.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        gamePanel.getMainWindow().dispose();  // Quitter
+    }
+});
+
+// Ajout des éléments à la sucessBox
+GridBagConstraints gbc = new GridBagConstraints();
+
+// Texte de félicitations
+gbc.gridwidth = GridBagConstraints.REMAINDER;
+gbc.insets = new Insets(15, 50, 0, 50);
+add(winLabel1, gbc);
+
+gbc.insets = new Insets(0, 50, 15, 50);
+gbc.gridy = 1;
+add(winLabel2, gbc);
+
+// Boutons
+homeButton.setPreferredSize(replayButton.getPreferredSize());
+quitButton.setPreferredSize(replayButton.getPreferredSize());
+
+homeButton.setMinimumSize(replayButton.getMinimumSize());
+quitButton.setMinimumSize(replayButton.getMinimumSize());
+
+gbc.gridwidth = 1;
+gbc.gridheight = 1;
+gbc.weighty = 0;
+gbc.gridy = 2;
+gbc.insets = new Insets(5, 10, 5, 10);
+
+gbc.gridx = 0;
+add(homeButton, gbc);
+
+gbc.gridx = 1;
+add(replayButton, gbc);
+
+gbc.gridx = 2;
+add(quitButton, gbc);
+
+// Initialement invisible
+setVisible(false);
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="gamePanel" mc="Standard.AssociationEnd" uid="c44d68e6-959c-4c0e-8d61-987e1b4f342a"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[gamePanel]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="GamePanel" mc="Standard.Class" uid="1facf43b-a0fb-4a61-b76e-83b88d0fcce4"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="sucessBox" mc="Standard.AssociationEnd" uid="16308689-0be5-40a9-a09a-b55f18d270be"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAggregation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Private</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[sucessBox]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <ID name="SuccessBoxPanel" mc="Standard.Class" uid="b2c3a5f6-0913-4a9c-9e5b-adff3ba2ed14"/>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <COMPID name="gamePanel" mc="Standard.AssociationEnd" uid="c44d68e6-959c-4c0e-8d61-987e1b4f342a"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Standard.Association" uid="0b9a39fd-2f33-46f2-a472-6a3544e583ee"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="7180e181-100f-435f-ad27-5bf508a27a56"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaNoInitValue" mc="Infrastructure.TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Standard.Association" uid="0b9a39fd-2f33-46f2-a472-6a3544e583ee"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="a7701900-d6b4-450e-b17b-b4cc592e8fb2"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="Infrastructure.TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.TaggedValue" uid="f5db897b-5995-4f37-b3c9-3f8c5fb52ad1"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Actual">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="2036db4b-94a2-40dd-b87c-d5a243434bc0"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[JPanel]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtends" mc="Infrastructure.TagType" uid="003800a8-0000-0154-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Infrastructure.TaggedValue" uid="c645c064-8460-4290-88b6-cba09eac26d4"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Actual">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="b10ab354-d045-43e0-94f1-db8e3f9552a8"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.awt.Color]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="cd500c40-5701-433a-922c-e9f58adc3fc3"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.awt.Font]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="73aa81cd-4bc1-4950-91ff-44d98167d368"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.awt.GridBagConstraints]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="2dc2b67c-5d9d-412d-ae1f-7299d2bf3848"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.awt.GridBagLayout]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="ec2c4fc2-2992-41ff-8b50-58cb350f67a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.awt.Insets]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="3fb928e2-852a-4739-8f4a-e69ef64f3726"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.awt.event.ActionEvent]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="160cce64-c0fe-49ab-ba09-33a25549e1ad"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.awt.event.ActionListener]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="83dac94f-f777-4ea3-87a3-630a665f2ab7"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[javax.swing.JButton]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="0abbbb3e-7874-48e9-a717-f4534b390081"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[javax.swing.JLabel]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="fb1b64f1-5990-4801-a7a4-8a30b23bcd17"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[javax.swing.JPanel]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="59e2284e-b3b0-4521-aab5-e72b86c1836c"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[javax.swing.border.LineBorder]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaImport" mc="Infrastructure.TagType" uid="003800a8-0000-0155-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

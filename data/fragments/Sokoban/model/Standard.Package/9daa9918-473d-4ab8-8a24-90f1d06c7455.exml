@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="viewSwing" version="4">
+  <OBJECT>
+    <ID name="viewSwing" mc="Standard.Package" uid="9daa9918-473d-4ab8-8a24-90f1d06c7455"/>
+    <PID name="sokoban" mc="Standard.Package" uid="530c2b0e-f2f9-452f-a751-6077d3d88438"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[viewSwing]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Window" mc="Standard.Class" uid="d30194df-a6fb-4df6-b4df-9ae14e33005b"/>
+        <COMPID name="HomePanel" mc="Standard.Class" uid="aaf74fe4-6b80-4b62-bbd7-3ec639c2444e"/>
+        <COMPID name="CellRendering" mc="Standard.Class" uid="e750eb88-b9fc-44af-8cf7-4a39ea9738e6"/>
+        <COMPID name="GamePanel" mc="Standard.Class" uid="1facf43b-a0fb-4a61-b76e-83b88d0fcce4"/>
+        <COMPID name="GameGrid" mc="Standard.Class" uid="bf679cea-f2d3-4561-ade8-dfcc5757d7be"/>
+        <COMPID name="SuccessBoxPanel" mc="Standard.Class" uid="b2c3a5f6-0913-4a9c-9e5b-adff3ba2ed14"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Product">
+        <COMPID name="viewSwing Class diagram" mc="Standard.ClassDiagram" uid="5149beab-1adc-40bd-bfaa-eab45fbea7c6"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

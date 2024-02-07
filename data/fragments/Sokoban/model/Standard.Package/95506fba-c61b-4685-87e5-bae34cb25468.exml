@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="entity" version="4">
+  <OBJECT>
+    <ID name="entity" mc="Standard.Package" uid="95506fba-c61b-4685-87e5-bae34cb25468"/>
+    <PID name="sokoban" mc="Standard.Package" uid="530c2b0e-f2f9-452f-a751-6077d3d88438"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[entity]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <OBJECT>
+          <ID name="Direction" mc="Standard.Enumeration" uid="8cd38d15-2b53-4cae-a401-ca6d956e1855"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">true</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Direction]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="UP" mc="Standard.EnumerationLiteral" uid="37ae023b-a377-4462-95ff-8e0e8dd10449"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[UP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="DOWN" mc="Standard.EnumerationLiteral" uid="452fcef1-9c85-415f-b0d1-e268700c2578"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[DOWN]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="LEFT" mc="Standard.EnumerationLiteral" uid="8058ff64-54c5-4330-b06f-d96994f7a84a"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[LEFT]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="RIGHT" mc="Standard.EnumerationLiteral" uid="f8e6e226-32b5-4608-b7ba-6a6e0bcabf76"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[RIGHT]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CellStatus" mc="Standard.Enumeration" uid="fdbb5cb5-918b-4f98-86ad-2bd2f5e6421a"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">true</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[CellStatus]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="WALL" mc="Standard.EnumerationLiteral" uid="1dec5884-f086-407d-9d1a-805834386f9c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[WALL]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="FLOOR" mc="Standard.EnumerationLiteral" uid="a7333046-365f-40d6-903f-2957a6b7f726"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[FLOOR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="PLAYER" mc="Standard.EnumerationLiteral" uid="e5b8101d-917e-4111-98e5-b04c9356cf2f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[PLAYER]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="TARGET" mc="Standard.EnumerationLiteral" uid="3e9c450d-6ca1-4823-98bf-874e0d352e2f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[TARGET]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BOX" mc="Standard.EnumerationLiteral" uid="9cce5219-8e90-48ea-a1e6-84c0703635d0"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BOX]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="PLAYER_TARGET" mc="Standard.EnumerationLiteral" uid="15034ca2-2026-42c4-aaaf-0d7d808506a4"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[PLAYER_TARGET]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BOX_TARGET" mc="Standard.EnumerationLiteral" uid="e8191f52-e4b9-49d7-a16d-d8306f946d65"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BOX_TARGET]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="Board" mc="Standard.Class" uid="4ee76a8a-042f-4ba6-9e61-0d4f2209d05e"/>
+        <COMPID name="Level" mc="Standard.Class" uid="fecd1c3c-c326-4994-a5c2-1c2e5cb5595e"/>
+        <COMPID name="Cell" mc="Standard.Class" uid="7721ece9-2896-45ba-98fd-f0a56b04894c"/>
+        <COMPID name="Box" mc="Standard.Class" uid="9870b974-bc26-4c7d-a0eb-ebcf930d7a87"/>
+        <COMPID name="Player" mc="Standard.Class" uid="23888269-f683-4c4c-b540-24e139bdb803"/>
+        <COMPID name="Movable" mc="Standard.Class" uid="3179ca75-59a4-426b-99fb-327fe819f57d"/>
+        <COMPID name="Floor" mc="Standard.Class" uid="7e214f86-7b18-4c0b-a5ad-6f6bb24f39f6"/>
+        <COMPID name="Wall" mc="Standard.Class" uid="52de8964-8901-4bbf-ac6f-32a5101f6893"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Product">
+        <COMPID name="Entity Class diagram" mc="Standard.ClassDiagram" uid="fc99b0ac-0555-48c7-9678-2d189d80a8c3"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

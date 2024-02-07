@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="viewConsole" version="4">
+  <OBJECT>
+    <ID name="viewConsole" mc="Standard.Package" uid="16334a66-942f-4563-af7a-92eba583206a"/>
+    <PID name="sokoban" mc="Standard.Package" uid="530c2b0e-f2f9-452f-a751-6077d3d88438"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[viewConsole]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Console" mc="Standard.Class" uid="cca4341e-73eb-4f6c-bdd7-136cc6d4ce57"/>
+        <OBJECT>
+          <ID name="ConsoleRequest" mc="Standard.Enumeration" uid="c1001f29-ebee-49af-a7be-8480f85490c7"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">true</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[ConsoleRequest]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="UNKNOWN" mc="Standard.EnumerationLiteral" uid="8db63910-7d13-47ca-8e42-910b8bc6da41"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[UNKNOWN]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="QUIT" mc="Standard.EnumerationLiteral" uid="aba5e763-fb36-4570-94f0-be7b9ffd8c29"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[QUIT]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="HELP" mc="Standard.EnumerationLiteral" uid="571ba8b3-1f11-475c-8fcd-24e11de88578"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[HELP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="REPLAY" mc="Standard.EnumerationLiteral" uid="261cc8b3-8a91-4dd3-93f1-33233d3ebd0e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[REPLAY]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MOVE_LEFT" mc="Standard.EnumerationLiteral" uid="12538b34-da64-4763-8a9c-e8c4d494cac0"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[MOVE_LEFT]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MOVE_RIGHT" mc="Standard.EnumerationLiteral" uid="9160bc2c-ef62-43f0-8553-7b082eb1d846"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[MOVE_RIGHT]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MOVE_UP" mc="Standard.EnumerationLiteral" uid="077b07cd-9169-4f5e-a287-4e8e80036368"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[MOVE_UP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MOVE_DOWN" mc="Standard.EnumerationLiteral" uid="6bc062ee-5a3b-4b74-aa4b-cdb952052730"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[MOVE_DOWN]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="YES" mc="Standard.EnumerationLiteral" uid="9a7855e7-f7eb-4aa6-85a8-5f43c9188ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[YES]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="NO" mc="Standard.EnumerationLiteral" uid="ae40bab4-9628-44fb-bcf3-65e70f19a303"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[NO]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="LEVEL" mc="Standard.EnumerationLiteral" uid="2b76c4e9-330a-4f39-92b8-6574ccb79f80"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[LEVEL]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="QuestionStatus" mc="Standard.Enumeration" uid="416052aa-32ca-4428-9327-5a22b61f7245"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">true</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[QuestionStatus]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="YES_NO" mc="Standard.EnumerationLiteral" uid="e1207fdc-450f-488f-a839-33efe116f7dd"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[YES_NO]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="MOVE" mc="Standard.EnumerationLiteral" uid="4a6fe917-48f9-4a43-8765-734225fa315d"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[MOVE]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="LEVEL" mc="Standard.EnumerationLiteral" uid="994c9242-9b79-4f38-996b-3e4836a8cc4f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[LEVEL]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="InteractionHandler" mc="Standard.Class" uid="6923cc22-171b-44e2-b4df-395d50fe943c"/>
+        <COMPID name="GameGrid" mc="Standard.Class" uid="ba9f225e-42d2-4e3a-995b-5c1c7d841040"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Product">
+        <COMPID name="viewConsole Class diagram" mc="Standard.ClassDiagram" uid="711fc3c3-a9f6-49f0-8bb6-9544d52e9407"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -14,3 +14,14 @@ The game was developed after modeling the game using UML diagrams with Modelio. 
   - using console input
   - using a graphical user interface
 - Multiple levels with increasing difficulty
+
+## Preview
+
+Here are some screenshots of the game:
+
+- Home page of the graphical user interface:
+  ![Preview of the Home Page of the graphical user interface](images/homePage-screenshot.png)
+- Home page of the graphical user interface:
+  ![Preview of the Game Page of the graphical user interface](images/gamePage-screenshot.png)
+- Sucess popup on the graphical user interface:
+  ![Preview of the sucess message on the graphical user interface](images/sucess-screenshot.png)
